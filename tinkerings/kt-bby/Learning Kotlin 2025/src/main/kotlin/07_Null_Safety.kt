@@ -13,7 +13,7 @@ fun main(){
     println("${tobesReview.name}, ${tobesReview.comment}, ${tobesReview.stars}")
     println("${saraReview.name}, ${saraReview.comment}, ${saraReview.stars}")
 
-    val saraLee: Int? = 5 //  results in an error> Argument type mismatch: actual type is 'Int?', but 'Int' was expected.
+    val saraLee: Int = 5 //  results in an error> Argument type mismatch: actual type is 'Int?', but 'Int' was expected.
     printReview("Ngoso", saraLee)
 
 }
