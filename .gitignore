@@ -11,4 +11,5 @@
 
 # ignored secrets
 .env
-notes.md
+.vscode
+
