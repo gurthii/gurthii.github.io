@@ -10,6 +10,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: large;
 }
 
 * {
@@ -39,7 +40,6 @@ body::-webkit-scrollbar {
     z-index: -1;
 }
 
-/* --- LAYOUT & CONTAINER --- */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
     z-index: 1;
 }
 
-/* --- NAVIGATION --- */
+
 #navbar {
     position: fixed;
     top: 0;
@@ -60,7 +60,7 @@ body::-webkit-scrollbar {
     background: transparent;
 }
 
-/* State when scrolling */
+/* Change state when scrolling */
 #navbar.scrolled {
     background: rgba(255, 255, 255, 0.256); /* Glass effect background */
     backdrop-filter: blur(12px);
@@ -87,6 +87,7 @@ body::-webkit-scrollbar {
 
 .logo-img {
     width: 2rem;
+    color: inherit;
 }
 .nav-links a {
     color: var(--text-secondary);
@@ -100,7 +101,6 @@ body::-webkit-scrollbar {
     color: var(--primary-color);
 }
 
-/* --- SECTIONS (Viewport Size) --- */
 header, section {
     min-height: 100vh; /* Takes up full viewport height */
     display: flex;
@@ -119,27 +119,30 @@ header {
 .intro-text {
     max-width: 600px;
 }
-/* 
-.status-text {
-    font-size: 0.9rem;
-    color: #21de37;
-    font-weight: 600;
-} */
 
 @keyframes blur-breathe {
     0%, 100% { filter: blur(0px); opacity: 1; }
     50% { filter: blur(1.5px); opacity: 0.7; }
 }
+.status-text a {
+    text-decoration: none;
+}
+
+.status-text a {
+    text-decoration: none;   
+    color: inherit;
+    cursor: pointer;            /* Keeps the hand cursor so people know it's clickable */
+}
 
 .status-text {
-    font-size: 0.9rem;
+    font-size: x-large;
     font-weight: 600;
     margin-bottom: 20px;
     display: inline-block;
     color: #21de37;
     animation: blur-breathe 3s ease-in-out infinite;
 }
-/* --- TYPOGRAPHY --- */
+
 h1 {
     font-size: 4rem;
     line-height: 1.1;
@@ -171,7 +174,6 @@ p {
     color: var(--text-secondary);
 }
 
-/* --- COMPONENTS --- */
 .glass-panel {
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
@@ -205,6 +207,28 @@ p {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
+.skill-list {
+    list-style: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.skill-list li {
+    margin-bottom: 6px;
+    padding-left: 15px;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.skill-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    line-height: 0.9rem;
+}
 
 .tag-container {
     margin-top: 15px;
@@ -223,7 +247,7 @@ p {
     font-weight: bold;
     margin-top: 10px;
     box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2);
-    transition: background 0.3s ease;
+    transition: background 0.5s ease;
 }
 
 .btn:hover {
@@ -252,7 +276,7 @@ p {
     text-decoration: underline;
 }
 
-/* --- SOCIAL & FOOTER --- */
+
 .contact-section {
     text-align: center;
     /* Override flex-start from generic section if needed, but centering handles it */
@@ -276,8 +300,8 @@ p {
 }
 
 .social-links img {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
 }
 
 footer {
@@ -287,7 +311,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- MODAL --- */
+
 #popup {
     display: none;
     position: fixed;
@@ -338,7 +362,6 @@ footer {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 1.5rem; }
