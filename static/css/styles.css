@@ -25,6 +25,7 @@ body {
     color: var(--text-main);
     overflow-x: hidden;
     position: relative;
+    line-height: 1.4;
 }
 
 body::-webkit-scrollbar {
